@@ -1,0 +1,35 @@
+.forecast-container {
+    margin-top: 30px;
+    text-align: left;
+    padding: 0 20px;
+  }
+  
+  .forecast-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  .forecast-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 120px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+    flex-shrink: 0;
+  }
+  
+  .forecast-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .dark .forecast-card {
+    background: rgba(30, 30, 30, 0.85);
+    color: #f2f2f2;
+  }
+  

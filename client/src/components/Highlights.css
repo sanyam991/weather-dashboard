@@ -1,0 +1,33 @@
+.highlights-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+  }
+  
+  .highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .highlight-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dark .highlight-card {
+    background: rgba(50, 50, 50, 0.85);
+    color: #f2f2f2;
+  }
+  

@@ -1,0 +1,66 @@
+.weather-main {
+  max-width: 380px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.location {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.condition {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.detail-item {
+  flex: 1;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

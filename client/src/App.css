@@ -1,0 +1,193 @@
+/* Base Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Color Variables */
+:root {
+  --input-bg: #ffffff;
+  --text: #111111;
+  --border: #ccc;
+  --highlight: #007bff;
+  --menu-bg: #f0f0f0;
+  --menu-text: #111;
+}
+
+.dark {
+  --input-bg: #2a2a2a;
+  --text: #f2f2f2;
+  --border: #444;
+  --menu-bg: #1c1c1c;
+  --menu-text: #f2f2f2;
+}
+
+/* App Layout */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+  color: var(--text);
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/7032.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.dark {
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/12453.jpg');
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: #121212;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Theme Toggle (Oval Icon) */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #444;
+  color: white;
+  width: 45px;
+  height: 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #666;
+}
+
+.dark .theme-toggle {
+  background: #e0e0e0;
+  color: #222;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+/* WeatherCard */
+.weather-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.dark .weather-card {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Forecast Container */
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forecast-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.forecast-item {
+  min-width: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlights */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Spinner */
+.spinner {
+  border: 6px solid #ddd;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .highlight-card {
+    font-size: 14px;
+  }
+
+  .forecast-scroll {
+    padding-bottom: 10px;
+  }
+}

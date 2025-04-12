@@ -1,0 +1,137 @@
+.searchbar-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.searched-city {
+  position: fixed;
+  top: 20px;  /* Position it at the top */
+  left: 50%;
+  transform: translateX(-50%);  /* Center it horizontally */
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text); /* Ensure it matches the theme */
+}
+
+/* Control box styling */
+.react-select__control {
+  background-color: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: none;
+  font-weight: 500;
+}
+
+/* Dropdown menu styling */
+.react-select__menu {
+  background-color: var(--input-bg);
+  color: var(--text);
+  z-index: 99999 !important;
+  border-radius: 10px;
+  position: absolute;
+}
+
+/* Dropdown option base */
+.react-select__option {
+  background-color: var(--input-bg);
+  color: var(--text);
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Option on hover/focus */
+.react-select__option--is-focused {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Selected item */
+.react-select__single-value {
+  color: var(--text);
+}
+
+/* Placeholder text */
+.react-select__placeholder {
+  color: #999;
+}
+
+/* 3D Search Button */
+.search-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Forecast section */
+.forecast {
+  position: absolute;
+  bottom: 10px;  /* Position it at the bottom of the page */
+  left: 50%;
+  transform: translateX(-50%);  /* Center it horizontally */
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.forecast h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Forecast days grid */
+.forecast-days {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 days */
+  gap: 20px;
+  justify-items: center; /* Center each item within the grid */
+}
+
+/* Styling for each forecast card */
+.forecast-day {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+}
+
+.forecast-day h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .forecast-days {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+
+  .forecast-day {
+    width: 150px;  /* Adjust width for smaller screens */
+  }
+}

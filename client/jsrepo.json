@@ -1,0 +1,12 @@
+{
+	"$schema": "https://unpkg.com/jsrepo@1.47.0/schemas/project-config.json",
+	"repos": [
+		"https://reactbits.dev/ts/default"
+	],
+	"includeTests": false,
+	"watermark": true,
+	"configFiles": {},
+	"paths": {
+		"*": "./src/blocks"
+	}
+}
